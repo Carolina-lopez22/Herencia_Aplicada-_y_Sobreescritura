@@ -10,6 +10,8 @@ public class Main {
 		ejercicio4();
 		ejercicio5();
 		ejercicio6();
+		ejercicio7();
+		ejercicio8();
 
 	}
 	public static void ejemploPractico() {
@@ -56,6 +58,19 @@ public class Main {
 		Perro perro = new Perro("Bruno","Chihuahua");
 		System.out.println(perro);
 		perro.hacerSonido();
+	}
+	public static void ejercicio7() {
+		Moto moto = new Moto ("Honda",150,220);
+		System.out.println(moto.mostrarInfo());
+	}
+	public static void ejercicio8() {
+	Rectangulo rectangulo = new Rectangulo ("Rojo",6.2,7.4);
+	Circulo circulo = new Circulo("Verde",4);
+	rectangulo.calcularArea();
+	circulo.calcularArea();
+	
+	System.out.println(rectangulo);
+	System.out.println(circulo);
 	}
 }
 
