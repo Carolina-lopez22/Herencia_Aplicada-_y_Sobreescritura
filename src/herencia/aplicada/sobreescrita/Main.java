@@ -8,6 +8,8 @@ public class Main {
 		ejercicio2();
 		ejercicio3();
 		ejercicio4();
+		ejercicio5();
+		ejercicio6();
 
 	}
 	public static void ejemploPractico() {
@@ -45,4 +47,21 @@ public class Main {
 		Bus bus = new Bus (60, "De Jutiapa hacia Jalapa");
 		System.out.println(bus.descripcion()); 
 	}
+	public static void ejercicio5() {
+		Gerente gerente = new Gerente("David", 8000, 1000);
+		System.out.println("Nombre: "+ gerente.nombre);
+		System.out.println("Salario total: "+gerente.calcularSalario()); 	
+	}
+	public static void ejercicio6() {
+		Perro perro = new Perro("Bruno","Chihuahua");
+		System.out.println(perro);
+		perro.hacerSonido();
+	}
 }
+
+
+
+
+
+
+
