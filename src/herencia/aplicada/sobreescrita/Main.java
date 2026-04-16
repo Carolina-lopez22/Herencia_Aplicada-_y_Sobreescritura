@@ -6,6 +6,8 @@ public class Main {
 		ejemploPractico();
 		ejercicio1();
 		ejercicio2();
+		ejercicio3();
+		ejercicio4();
 
 	}
 	public static void ejemploPractico() {
@@ -32,5 +34,15 @@ public class Main {
 		cuenta2.retirar(6000);
 		System.out.println("Saldo de cuenta Corriente: "+ cuenta2.saldo);
 	}
-
+	public static void ejercicio3() {
+		ProductoPerecedero produc = new ProductoPerecedero ("Leche", 15.20, 25,3,2020);
+		ProductoPerecedero product = new ProductoPerecedero ("Jamon", 25.50, 15,5,2029);
+		
+		System.out.println("Producto: "+produc.nombre+ " Precio:"+ produc.precio + " "+produc.estaVencido());
+		System.out.println("Producto: "+product.nombre+ " Precio:"+ product.precio + " "+product.estaVencido());
+	}
+	public static void ejercicio4() {
+		Bus bus = new Bus (60, "De Jutiapa hacia Jalapa");
+		System.out.println(bus.descripcion()); 
+	}
 }

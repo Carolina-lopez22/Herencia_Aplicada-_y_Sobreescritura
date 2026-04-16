@@ -1,7 +1,7 @@
 package herencia.aplicada.sobreescrita;
 
 public class Estudiante extends Persona{
-	protected String carnet;
+	private String carnet;
 
 	public Estudiante(String nombre, int edad, String carnet) {
 		super(nombre, edad);

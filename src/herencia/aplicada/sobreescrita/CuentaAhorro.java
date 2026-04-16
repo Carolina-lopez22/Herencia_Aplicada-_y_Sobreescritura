@@ -1,7 +1,7 @@
 package herencia.aplicada.sobreescrita;
 
 public class CuentaAhorro extends Cuenta {
-	protected double tasa;
+	private double tasa;
 
 	public CuentaAhorro(double saldo, double tasa) {
 		super(saldo);
