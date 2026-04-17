@@ -12,7 +12,8 @@ public class Main {
 		ejercicio6();
 		ejercicio7();
 		ejercicio8();
-
+		ejercicio9();
+		ejercicio10();
 	}
 	public static void ejemploPractico() {
 		Cuenta cuenta = new Cuenta(200);
@@ -72,7 +73,27 @@ public class Main {
 	System.out.println(rectangulo);
 	System.out.println(circulo);
 	}
-}
+	public static void ejercicio9(){
+		Libro lib1 =new Libro("El Principito","Hugo.Vela");
+		LibroDigital lib2 =new LibroDigital("La Escalera","Angel.Ortiz",50.6);
+		System.out.println(lib1.mostrarInfo());
+		System.out.println(lib2.mostrarInfo());
+	}
+	public static void ejercicio10() {
+		Cliente cliente = new Cliente ("David Solis", 45258);
+		Cliente cliente2 = new Cliente ("Sara Oliva ", 52359);
+	
+		FacturaContado factura1 = new FacturaContado(01,cliente,5000,500);
+		FacturaCredito factura2 = new FacturaCredito(02,cliente2,7000,50, 5);
+		
+		System.out.println("Nombre: "+cliente.getNombre()+ " NIT: "+cliente.getNIT());
+		System.out.println(factura1);
+
+		System.out.println("Nombre: "+cliente2.getNombre()+ " NIT: "+cliente2.getNIT());
+		System.out.println(factura2);
+
+	}
+	}
 
 
 
