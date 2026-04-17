@@ -11,6 +11,6 @@ public class Moto extends Vehiculo{
 	public String mostrarInfo() {
 		return "Marca: " + marca+" Velocidad: "+velocidad+" Cilindrada: "+cilindrada;
 	}
-	
-
 }
+//Aplique herencia en esta clase para no tener que repetir variables que estan en la clase padre que es la clase vehiculo
+//De esta manera se ahorra codigo 

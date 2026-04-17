@@ -5,7 +5,7 @@ public class FacturaContado extends Factura{
 
 	public FacturaContado(int numero, Cliente cliente, double total, double descuento) {
 		super(numero, cliente, total);
-		this.descuento = descuento;
+		setDescuento(descuento);
 	}
 
 	public double getDescuento() {
@@ -13,19 +13,24 @@ public class FacturaContado extends Factura{
 	}
 
 	public void setDescuento(double descuento) {
-		if (descuento<0)
-			System.out.println("El descuento no puede ser negativo");
-		else 
-		this.descuento = descuento;
+		if (descuento>=0)
+			this.descuento = descuento;
+		else
+			this.descuento = 0;
 	}
 	@Override
 	public double calcularTotal() {
-		return total-this.descuento;
+		double totalFinal = total-this.descuento;
+		if (totalFinal < 0)
+			return 0;
+		else
+		return totalFinal;
+		//sobrescribi este metodo porque se necesitaba calcular cuanto era el total de la factura sin el descuento que se le esta haciendo
 	}
 	@Override
 	public String toString() {
 		return "FacturaContado [numero = " + numero + ", descuento = " + descuento + ", total = "
 				+ total + ", Total Final = " + calcularTotal() + "]";
 	}
-
 }
+//Aplique herencia en esta clase ya que necesitaba atributos de la clase Padre Factura que utilice aqui tambien

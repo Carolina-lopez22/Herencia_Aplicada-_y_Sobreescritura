@@ -13,5 +13,5 @@ public class Docente extends Persona {
 	public String mostrar() {
 		return "Nombre=" + nombre + ", edad=" + edad +" Especialidad = "+ especialidad ;
 	}
-
 }
+//Aplique herencia en esta clase al acceder a los atributos de la clase padre Persona 

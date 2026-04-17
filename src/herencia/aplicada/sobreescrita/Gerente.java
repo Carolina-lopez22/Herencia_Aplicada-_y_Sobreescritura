@@ -12,5 +12,7 @@ public class Gerente extends Empleado {
 	public double calcularSalario() {
 		return salario + bonoAdicional;
 	}
-
+//sobrescribi este metodo para calcular el salario del gerente 
 }
+//Aplique herencia en esta clase al redifinir un metodo y para poder ahorrarme codigo con atributos que necesitaba 
+// y que estaban en la clase padre Empleado

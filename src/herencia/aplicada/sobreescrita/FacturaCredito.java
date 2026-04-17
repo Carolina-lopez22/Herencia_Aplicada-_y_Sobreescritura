@@ -6,8 +6,8 @@ public class FacturaCredito extends Factura {
 	
 	public FacturaCredito(int numero, Cliente cliente, double total, double recargo, int cuotas) {
 		super(numero, cliente, total);
-		this.recargo = recargo;
-		this.cuotas = cuotas;
+		setRecargo(recargo);
+		setRecargo(cuotas);
 	}
 
 	public double getRecargo() {
@@ -15,8 +15,10 @@ public class FacturaCredito extends Factura {
 	}
 
 	public void setRecargo(double recargo) {
-		if (recargo>0)
+		if (recargo>=0)
 		this.recargo = recargo;
+		else
+			this.recargo = 0;
 	}
 
 	public int getCuotas() {
@@ -24,12 +26,19 @@ public class FacturaCredito extends Factura {
 	}
 
 	public void setCuotas(int cuotas) {
-		if(cuotas>0)
+		if(cuotas>=0)
 		this.cuotas = cuotas;
+		else
+			this.cuotas = 0;
 	}
 	@Override
 	public double calcularTotal() {
-		return total+this.recargo;
+		double totalFinal = total+this.recargo;
+		if (totalFinal < 0)
+			return 0;
+		else
+		return totalFinal; 
+		//sobrescribi este metodo para calcular el total la factura añadiendole el cargo correspondiente
 	}
 
 	@Override
@@ -37,5 +46,5 @@ public class FacturaCredito extends Factura {
 		return "FacturaCredito [numero = " + numero + ", recargo = " + recargo + ", cuotas = "
 				+ cuotas + ", total = " + total + ", Total Final = " + calcularTotal() + "]";
 	}
-	
 }
+//Aplique herencia de la clase padre Factura ya que se necesitaban usar atributos de esa clase

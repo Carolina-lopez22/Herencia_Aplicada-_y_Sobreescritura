@@ -8,7 +8,7 @@ public class Factura {
 	public Factura(int numero, Cliente cliente, double total) {
 		this.numero = numero;
 		this.cliente = cliente;
-		this.total = total;
+		setTotal(total);
 	}
 
 	public double getTotal() {
@@ -16,13 +16,17 @@ public class Factura {
 	}
 
 	public void setTotal(double total) {
-		if (total<0)
-			System.out.println("El total no puedes ser negativo");
-		else
+		if (total>=0)
 		this.total = total;
+		else 
+			this.total = 0;
 	}
 	public double calcularTotal() {
-		return total;
+		double totalFinal = this.total;
+		if (totalFinal < 0)
+			return 0;
+		else
+		return totalFinal;
 	}
 	
 }

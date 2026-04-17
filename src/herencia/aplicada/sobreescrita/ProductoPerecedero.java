@@ -26,4 +26,4 @@ public String estaVencido() {
 	return "Producto bueno";
 	}
 }
-
+//Se aplico herencia al usar atributos de la clase padre Producto para evitar repetir codigo
